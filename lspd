@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LSPD - Site Officiel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('police_background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: rgb(235, 235, 235);
+            text-align: center;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 20px;
+            box-shadow: 0px 4px 8px rgba(68, 58, 58, 0.5);
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        nav a {
+            color: rgb(254, 254, 255);
+            padding: 10px 15px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.2);
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        nav a:hover {
+            background: rgba(255, 255, 255, 0.5);
+        }
+        .content {
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 15px;
+            display: inline-block;
+            margin: 30px auto;
+            width: 85%;
+            box-shadow: 0px 4px 12px rgba(53, 2, 2, 0.5);
+        }
+        h2 {
+            border-bottom: 2px solid rgb(99, 23, 23);
+            padding-bottom: 10px;
+        }
+        p, ul {
+            text-align: left;
+            margin: 10px 0;
+        }
+        .custom-button {
+            background-color: #007BFF;
+            color: rgb(7, 17, 148);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        .custom-button:hover {
+            background-color: #0056b3;
+        }
+        .bold-text {
+            font-weight: bold;
+        }
+        .rule {
+            margin-bottom: 15px;
+        }
+    </style>
+    <script>
+        function showSection(section) {
+            document.getElementById('accueil').style.display = 'none';
+            document.getElementById('reglement').style.display = 'none';
+            document.getElementById('seresty').style.display = 'none';
+            document.getElementById('recrutement').style.display = 'none';
+
+            document.getElementById(section).style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Los Santos Police Departement</h1>
+        <nav>
+            <a onclick="showSection('accueil')">Accueil</a>
+            <a onclick="showSection('reglement')">Règlement & Call Radio</a>
+            <a onclick="showSection('seresty')">Règlement Seresty</a>
+            <a onclick="showSection('recrutement')">Recrutement</a> <!-- Nouveau lien Recrutement -->
+        </nav>
+    </header>
+    
+    <!-- Section Accueil -->
+    <section id="accueil" class="content" style="display: block;">
+        <h2>Bienvenue sur le site officiel du LSPD</h2>
+        <p>Protéger et servir la ville de Los Santos avec honneur et intégrité. Voici la devise de la LSPD. Vous êtes prêt à protéger votre prochain ? Dans ce cas, n'hésitez pas à nous rejoindre ! </p>
+        <img src="C:\Users\dimit\Downloads\Logo_lspd.webp" alt="LSPD Logo" width="200">
+    </section>
+    
+    <!-- Section Règlement & Call Radio -->
+    <section id="reglement" class="content" style="display: none;">
+        <h2>Règlement & Call Radio</h2>
+        
+        <h3>Règlement LSPD</h3>
+
+        <div class="rule">
+            <p><span class="bold-text">Intervention sur convois illégaux :</span><br>Il est interdit d’intervenir seul lors d’un convoi illégal. Vous devez attendre des renforts.</p>
+        </div>
+        <div class="rule">
+            <p><span class="bold-text">Respect de la fonction :</span><br>En tant que membre des forces de l'ordre, vous représentez la loi. Vous devez maintenir une attitude professionnelle et respectueuse envers les citoyens et vos collègues.</p>
+        </div>
+        <div class="rule">
+            <p><span class="bold-text">Corruption et infiltration :</span><br>Un agent peut être corrompu ou infiltré uniquement avec l’accord préalable du staff et sous condition d’un dossier RP validé.</p>
+        </div>
+        <div class="rule">
+            <p><span class="bold-text">Usurpation d'identité :</span><br>Toute personne se faisant passer pour un agent de la LSPD/BCSO ou tout autre service est passible de sanctions, sauf autorisation exceptionnelle dans le cadre d’une scène validée par le staff.</p>
+        </div>
+        <div class="rule">
+            <p><span class="bold-text">Usage de la force :</span><br>Un agent ne doit jamais tirer le premier, sauf en cas de danger imminent. Les armes létales ne doivent donc être utilisées qu’en dernier recours ou en légitime défense. Leur utilisation doit être proportionnée au danger.</p>
+        </div>
+        <div class="rule">
+            <p><span class="bold-text">Surveillance des points illégaux :</span><br>Les agents ne doivent pas patrouiller ou camper sur les points de drogue. Préférez effectuer des contrôles routiers pour préserver l’équilibre du RP.</p>
+        </div>
+        <div class="rule">
+            <p><span class="bold-text">Proportionnalité des moyens :</span><br>Comportez-vous de manière adaptée à la situation, car votre riposte doit toujours être proportionnelle à l'attaque :</p>
+            <ul>
+                <li><strong>Peu agressif</strong> - Utilisation du taser ou de la matraque.</li>
+                <li><strong>Braquage supérette :</strong> Maximum 5 agents contre 3 braqueurs (armes légères).</li>
+                <li><strong>Braquage important (Fleeca, bijouterie) :</strong> Armes automatiques autorisées avec l’accord d’un haut gradé.</li>
+                <li><strong>Utilisation d’armes automatiques (ex. : M4) :</strong> Autorisée en cas de confrontation avec un groupe armé conséquent ou en présence d’armes automatiques chez les assaillants.</li>
+                <li><strong>Braquage de banque / bijouterie :</strong> Armes automatiques autorisées avec l’accord d’un haut gradé.</li>
+            </ul>
+        </div>
+        <div class="rule">
+            <p><span class="bold-text">Saisies :</span><br>Les armes utilisées lors d’une fusillade peuvent être saisies immédiatement pour sécuriser la zone. Les autres saisies (drogue, argent, etc.) doivent être effectuées au poste, après les droits de Miranda.</p>
+        </div>
+        <div class="rule">
+            <p><span class="bold-text">Les seules méthodes pour libérer un prisonnier :</span><br>Attendre qu’il purge sa peine (GAV ou prison), une attaque sur le convoi pénitentiaire annoncé, ou une scène de libération RP et cohérente.</p>
+        </div>
+        <div class="rule">
+            <p><span class="bold-text">Contrôle :</span><br>Lors d’un contrôle, les agents doivent privilégier le dialogue avant d'utiliser la force ou de procéder à une arrestation.</p>
+        </div>
+        <div class="rule">
+            <p><span class="bold-text">Sanctions internes :</span><br>Les agents ne respectant pas les règles internes doivent être sanctionnés (mise à pied, suspension, rétrogradation).</p>
+        </div>
+        <div class="rule">
+            <p><span class="bold-text">Zones de juridiction :</span><br>Les agents doivent respecter leurs zones de juridiction (LSPD pour Los Santos, BCSO pour Blaine County). Les interventions hors juridiction doivent être justifiées.</p>
+        </div>
+        <div class="rule">
+            <p><span class="bold-text">Sirène :</span><br>L’utilisation abusive des sirènes pour des déplacements non prioritaires est interdite.</p>
+        </div>
+        <div class="rule">
+            <p><span class="bold-text">Course-poursuite :</span><br>Les agents peuvent effectuer un PIT après 5 minutes de poursuite avec accord de la centrale, sauf en cas d'abus flagrant de la part d'un joueur. La manœuvre PIT doit être réalisée à une vitesse modérée (moins de 100 km/h).</p>
+        </div>
+        <div class="rule">
+            <p><span class="bold-text">Utilisation des véhicules :</span><br>Les véhicules de fonction ne doivent être utilisés que lorsque vous êtes en service. Un policier en service ne peut pas utiliser un véhicule civil.</p>
+        </div>
+        <div class="rule">
+            <p><span class="bold-text">Négociation :</span><br>Les négociations doivent rester fair-play et équilibrées.</p>
+        </div>
+        
+        <h3>Call Radio</h3>
+        <ul>
+            <li>10-4 : Affirmatif</li>
+            <li>10-5 : Négatif</li>
+            <li>10-6 : Pause de service</li>
+            <li>10-8 : Prise de service</li>
+            <li>10-9 : Réitérer le Message</li>
+            <li>10-10 : Fin de Service</li>
+            <li>10-11 : En Direction de</li>
+            <li>10-12 : En Attente de DISPATCH</li>
+            <li>10-13 : Agent Blessé</li>
+            <li>10-14 : Braquage</li>
+            <li>10-15 : Fusillade</li>
+            <li>10-17 : Prise d’otage</li>
+            <li>10-18 : Demande de Renfort d’urgence</li>
+            <li>10-19 : Retour au Poste De Police</li>
+            <li>10-20 : Position de l’agent</li>
+            <li>10-25 : A.S.D sur Zone (Code Unité A.S.D)</li>
+            <li>10-26 : A.S.D Ravitaillement (Code Unité A.S.D)</li>
+            <li>10-30 : Dernière position de l’individu (Perdu après 10-31)</li>
+            <li>10-31 : Course poursuite</li>
+            <li>10-32 : Poursuite à pied</li>
+            <li>10-38 : Dernier appel citoyen</li>
+            <li>10-41 : Début de Patrouille</li>
+            <li>10-42 : Fin de Patrouille</li>
+            <li>10-45 : Demande d’informations</li>
+            <li>10-48 : Contrôles en cours</li>
+            <li>10-50 : Accident</li>
+            <li>10-59 : Vol à l’arraché</li>
+            <li>10-61 : Vente de drogue en cours</li>
+            <li>10-62 : Manifestation ou regroupement illégal</li>
+            <li>10-68 : Véhicule en cours de vandalisme</li>
+            <li>10-71 : Coup de feu</li>
+            <li>10-99 : TOUTES LES UNITÉS SUR POSITION / AGENT EN DANGER</li>
+            <li>10-100 : Policier à terre</li>
+        </ul>
+
+        <h3>Intitulé des Patrouilles</h3>
+        <ul>
+            <li>Lincoln : Patrouille en SOLO</li>
+            <li>Adam : Patrouille en DUO</li>
+            <li>Tango : Patrouille en TRIO</li>
+            <li>X-ray : Patrouille en QUATUOR</li>
+            <li>MARY : Patrouille Motorisé</li>
+            <li>ASD : Patrouille AÉRIENNE</li>
+            <li>Hubert : Patrouille MARITIME</li>
+            <li>Victor : Patrouille CYCLISME</li>
+        </ul>
+
+        <h3>Code Véhicules</h3>
+        <ul>
+            <li>Code 0 : Individu perdu de vue</li>
+            <li>Code 1 : Véhicule sans GYROPHARE / sans SIRÈNE</li>
+            <li>Code 2 : Véhicule avec GYROPHARE / sans SIRÈNE</li>
+            <li>Code 3 : Véhicule avec GYROPHARE / avec SIRÈNE</li>
+            <li>Code 4 : Situation sous contrôle, pas besoin de renfort</li>
+            <li>Code 5 : Besoin de renfort sur position (1 ou 2 unités ou plus)</li>
+        </ul>
+    </section>
+
+    <!-- Section Règlement Seresty -->
+    <section id="seresty" class="content" style="display: none;">
+        <h2>Règlement Seresty</h2>
+        <a href="https://docs.google.com/document/d/1TOnxgOlZjY2rZn88C1bGtuBEWPGN9UA5IRTJo1GAoEo/edit?usp=sharing" target="_blank">
+            <button class="custom-button">Voir le règlement Seresty</button>
+        </a>
+    </section>
+
+    <!-- Section Recrutement -->
+    <section id="recrutement" class="content" style="display: none;">
+        <h2>Recrutement LSPD</h2>
+        <p>Vous souhaitez rejoindre les rangs du Los Santos Police Departement ? Remplissez le formulaire de recrutement en suivant ce lien :</p>
+        <a href="https://docs.google.com/forms/d/1qfSG8u6hCqXNmvH06P9TXNMrqDlHUBiN8aC7oH3QMO0/prefill" target="_blank">
+            <button class="custom-button">Formulaire de Recrutement</button>
+        </a>
+    </section>
+
+</body>
+</html>
+
